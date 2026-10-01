@@ -1,0 +1,22 @@
+name: Check watched repositories
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 5 * * 3'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check watched repositories
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node script.mjs

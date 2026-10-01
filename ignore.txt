@@ -1,0 +1,3 @@
+# Ignore list for watch-check. One `owner/repo` per line.
+# Lines starting with '#' are comments; blank lines are ignored.
+# Example: my-user/some-repo-to-ignore

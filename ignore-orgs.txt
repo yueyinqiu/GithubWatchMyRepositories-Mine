@@ -1,0 +1,4 @@
+# Ignore list for blocked-organization warnings. One org login per line.
+# Lines starting with '#' are comments; blank lines are ignored.
+# Example: some-org
+
